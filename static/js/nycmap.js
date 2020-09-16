@@ -37,9 +37,9 @@ const evictionTotal = (id) => {
     }
 
     d3.json(allData, function (response) {
-        const markers2017 = [];
-        const markers2018 = [];
-        const markers2019 = [];
+        let markers2017 = [];
+        let markers2018 = [];
+        let markers2019 = [];
 
         for (let i = 0; i < response.length; i++) {
 
