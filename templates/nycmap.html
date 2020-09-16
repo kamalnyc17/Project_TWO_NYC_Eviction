@@ -46,12 +46,40 @@
 
   <!-- container/wrapper-->
   <div class="container">
-    <!-- local news -->
-    <h1>NYC Map</h1>
-    <!-- sticky footer-->
-    <nav class="navbar justify-content-center fixed-bottom navbar-dark bg-dark border-top border-dark">
-      <a class="navbar-brand" href="#">Copyright &copy</a>
-    </nav>
+    <!-- year over year plot -->
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <p class="heading">NYC Eviction Record - Map by Zip code</p>
+        <p class="sub-heading">Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="well">
+          <h5>Select Eviction Threshold:</h5>
+          <select id="selDataset">
+            <option>All Evictions</option>
+            <option>Upto 100 per Yr</option>
+            <option>101 - 200 per Yr</option>
+            <option>201 - 300 per Yr</option>
+            <option>More than 300 per Yr</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div id="line"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 footer-info">
+        <p class="plot-info">Select a borough to dynamically change the line chart to visualize the number of evictions
+          year by year.</p>
+        <p class="plot-info">Interestingly, during the holiday season (October - December), evictions decrease
+          significantly. Otherwise,
+          during the rest of the year evictions are fluctuating. This may be because around the holidays marshals
+          customarily take their break, providing temporary relief to tenants.</p>
+      </div>
+    </div>
   </div>
 
   <!-- jquery-->
@@ -63,6 +91,10 @@
   </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script type="text/javascript">
+    var data = JSON.parse('{{ data | tojson | safe}}');
   </script>
 </body>
 

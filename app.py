@@ -47,8 +47,10 @@ def yearoveryear():
 
 
 @app.route("/nycmap")
-def localnews():
-    return render_template("nycmap.html")
+def nycmap():
+    json_url = os.path.join(SITE_ROOT, "static\\data", "combined_zip.json")
+    data = json.load(open(json_url))
+    return render_template("nycmap.html", data=data)
 
 
 @app.route("/aboutus")
