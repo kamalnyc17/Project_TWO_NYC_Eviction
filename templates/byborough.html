@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NYC Eviction Record</title>
+
+  <!-- Bring in our bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!-- style information -->
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+
+<body>
+  <!-- nav bar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand logo" href="/" style="color: white">NYC Eviction</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="col-2"></div>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
+        <li><a href="/" class="menu-option">Home</a></li>
+        <li><a href="/method" class="menu-option">Method</a></li>
+        <!-- NEW CODE -->
+        <li class="nav-item dropdown">
+          <a href="#" class="menu-option dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+            aria-expanded="true"> <span class="nav-label">Visualizations</span> <span class="caret"></span></a>
+          <ul class="menu-option dropdown-menu">
+            <li><a href="/byborough" class="menu-option">By Borough</a></li>
+            <li><a href="/byproperty" class="menu-option">By Property Type</a></li>
+            <li><a href="/byzipcode" class="menu-option">By Zip code</a></li>
+            <li><a href="/yearoveryear" class="menu-option">Year over Year</a></li>
+          </ul>
+        </li>
+        <li><a href="/nycmap" class="menu-option">NYC Map</a></li>
+        <li><a href="/aboutus" class="menu-option">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- container/wrapper-->
+  <div class="container">
+    <!-- plot by borough -->
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <p class="heading">NYC Eviction Record - By Borough</p>
+        <p class="sub-heading">Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="well">
+          <h5>Select Calendar Year:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)">
+            <option>2019</option>
+            <option>2018</option>
+            <option>2017</option>
+          </select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h5 class="panel-title">Borough Info</h5>
+          </div>
+          <div id="sample-metadata" class="panel-body">
+            <div id="bronx" class="panel-body">BRONX</div>
+            <div id="brooklyn" class="panel-body">BROOKLYN</div>
+            <div id="manhattan" class="panel-body">MANHATTAN</div>
+            <div id="queens" class="panel-body">QUEENS</div>
+            <div id="statenisland" class="panel-body">STATEN ISLAND</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div id="pie"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 footer-info">
+        <p class="plot-info">Select a year to dynamically change the pie chart to visualize the number of evictions
+          by borough. Also, see
+          the borough information dynamically change in the table.</p>
+        <p class="plot-info">As shown, the Bronx consistently has the highest number of evictions each year and Staten
+          Island has the
+          lowest. This may be because Staten Island has more single-family homes and a smaller population.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- jquery-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script type="text/javascript">
+    var data = JSON.parse('{{ data | tojson | safe}}');
+  </script>
+  <script src="../static/js/byBorough.js"></script>
+</body>
+
+</html>

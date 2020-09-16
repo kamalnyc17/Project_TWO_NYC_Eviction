@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NYC Eviction Record</title>
+
+  <!-- Bring in our bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!-- style information -->
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+
+<body>
+  <!-- nav bar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand logo" href="/" style="color: white">NYC Eviction</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="col-2"></div>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
+        <li><a href="/" class="menu-option">Home</a></li>
+        <li><a href="/method" class="menu-option">Method</a></li>
+        <!-- NEW CODE -->
+        <li class="nav-item dropdown">
+          <a href="#" class="menu-option dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+            aria-expanded="true"> <span class="nav-label">Visualizations</span> <span class="caret"></span></a>
+          <ul class="menu-option dropdown-menu">
+            <li><a href="/byborough" class="menu-option">By Borough</a></li>
+            <li><a href="/byproperty" class="menu-option">By Property Type</a></li>
+            <li><a href="/byzipcode" class="menu-option">By Zip code</a></li>
+            <li><a href="/yearoveryear" class="menu-option">Year over Year</a></li>
+          </ul>
+        </li>
+        <li><a href="/nycmap" class="menu-option">NYC Map</a></li>
+        <li><a href="/aboutus" class="menu-option">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- container/wrapper-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <p class="heading">New York City Eviction Record: 2017 - 2019</p>
+      </div>
+    </div>
+    <!-- top banner -->
+    <div class="row">
+      <div class="col-md-12">
+        <img src="../static/images/Homepage-Top-Banner.jpg" alt="Home Page Top Banner"
+          style="padding-bottom: 10px;width:950px;height:400px;">
+      </div>
+    </div>
+    <!-- introduction -->
+    <div class="row">
+      <div class="col-md-12">
+        <span class="homepage-heading">Introduction</span>
+      </div>
+      <div class="col-md-12">
+        <p class="homepage-info">This dashboard seeks to look at NYC eviction data between the years 2017-2019.
+          Visualizations are based on
+          data extracted from the City of New York website (NYC Open Data). Because of COVID-19 and a moratorium on
+          evictions from mid-March 2020 through October 1, there was no data for at least half of the year 2020. Despite
+          this, our team decided to continue analyzing eviction data from 2017-2019 to see if there are any trends we
+          can uncover.</p>
+        <p class="homepage-info">When tenants are for any reason not paying their rent or are otherwise not legally
+          occupying their apartment,
+          landlords can mount a nonpayment or holdover eviction proceeding against them and bring them to housing court.
+          In NYC, housing courts in all boroughs are usually filled with frenzied landlords, tenants, lawyers, and
+          housing court and community organization officials. Pre COVID-19, evictions and housing court cases were in
+          full swing as regularly scheduled programming. But during this unprecedented time of a global pandemic, in
+          mid-March 2020, Governor Andrew Cuomo issued a moratorium on evictions. Now, residential tenants cannot be
+          evicted through October 1.</p>
+        <p class="homepage-info">In the “Visualizations” tab, you can find four interactive charts. In the charts, we
+          looked at evictions by
+          borough, by property type, by zip code, and year over year. In the “NYC Map” tab, you can find a dynamic map
+          in which we plotted the zip codes with a high number of evictions.</p>
+      </div>
+    </div>
+    <!-- image # two -->
+    <div class="row">
+      <div class="col-md-12">
+        <img src="../static/images/Homepage-Banner-Two.jpg" alt="Home Page Banner Two"
+          style="padding-bottom: 10px;width:950px;height:400px;">
+      </div>
+    </div>
+  </div>
+
+  <!-- jquery-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
