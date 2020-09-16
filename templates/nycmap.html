@@ -9,7 +9,8 @@
 
   <!-- Bring in our bootstrap stylesheet -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
+  <!-- Bring in Mapbox CSS -->
+  <link rel="stylesheet" href="//api.mapbox.com/mapbox.js/v2.2.2/mapbox.css" />
   <!-- style information -->
   <link rel="stylesheet" type="text/css" href="../static/css/style.css">
 </head>
@@ -57,7 +58,7 @@
       <div class="col-md-4">
         <div class="well">
           <h5>Select Eviction Threshold:</h5>
-          <select id="selDataset">
+          <select id="selDataset" onchange="evictionTotal(this.value)">
             <option>All Evictions</option>
             <option>Upto 100 per Yr</option>
             <option>101 - 200 per Yr</option>
@@ -66,8 +67,8 @@
           </select>
         </div>
       </div>
-      <div class="col-md-8">
-        <div id="map"></div>
+      <div class="col-md-8" id="mapPapa">
+        <div id="map" style="height: 600px;"></div>
       </div>
     </div>
     <div class="row">
@@ -93,6 +94,9 @@
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
   </script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- API key -->
+  <script type="text/javascript" src="static/js/config.js"></script>
+
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
     integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
