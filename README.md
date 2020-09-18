@@ -1,6 +1,8 @@
 ![Alt text](static/images/Homepage-Top-Banner.jpg?raw=true "Image to view")
 # NYC Evictions Analysis 
-------------------------------------------------------------------------------------------------------
+#### Columbia University Data Analytics Bootcamp - Project 2 (September 2020) 
+#### Project By: Alfonso Toruno, Himani Manglik, Kamal Mukherjee, Shivani Thakkar
+-----------------------------------------------------------------------------------
 
 ## Goal 
 #### Visualize trends related to evictions in NYC between the years 2017-2019 on an interactive dashboard.
