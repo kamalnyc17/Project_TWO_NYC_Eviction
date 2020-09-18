@@ -15,73 +15,72 @@
 </head>
 
 <body>
-  <!-- nav bar-->
-  <nav class="navbar navbar-expand-lg" style="background-color: wheat; color: white">
-    <a class="navbar-brand logo" href="/" style="background-color: wheat; color: white">NYC Eviction</a>
-    <div class="col-6"></div>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
-        <li><a href="/method" class="menu-option">Method</a></li>
-        <!-- NEW CODE -->
-        <li class="nav-item dropdown">
-          <a href="#" class="menu-option dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-            aria-expanded="true"> <span class="nav-label">Visualizations</span> <span class="caret"></span></a>
-          <ul class="menu-option dropdown-menu" style="background-color: wheat">
-            <li><a href="/byborough" class="menu-option">By Borough</a></li>
-            <li><a href="/byproperty" class="menu-option">By Property Type</a></li>
-            <li><a href="/byzipcode" class="menu-option">By Zip code</a></li>
-            <li><a href="/yearoveryear" class="menu-option">Year over Year</a></li>
-          </ul>
-        </li>
-        <li><a href="/nycmap" class="menu-option">NYC Map</a></li>
-        <li><a href="/aboutus" class="menu-option">About Us</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div class="wrapper">
+    <!-- nav bar-->
+    <nav class="navbar navbar-expand-lg" style="background-color: wheat; color: white">
+      <a class="navbar-brand logo" href="/" style="background-color: wheat; color: white">NYC Eviction</a>
+      <div class="col-6"></div>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
+          <li><a href="/method" class="menu-option">Method</a></li>
+          <!-- NEW CODE -->
+          <li class="nav-item dropdown">
+            <a href="#" class="menu-option dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="true"> <span class="nav-label">Visualizations</span> <span class="caret"></span></a>
+            <ul class="menu-option dropdown-menu" style="background-color: wheat">
+              <li><a href="/byborough" class="menu-option">By Borough</a></li>
+              <li><a href="/byproperty" class="menu-option">By Property Type</a></li>
+              <li><a href="/byzipcode" class="menu-option">By Zip code</a></li>
+              <li><a href="/yearoveryear" class="menu-option">Year over Year</a></li>
+            </ul>
+          </li>
+          <li><a href="/nycmap" class="menu-option">NYC Map</a></li>
+          <li><a href="/aboutus" class="menu-option">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
 
-  <!-- container/wrapper-->
-  <div class="container">
-    <!-- plot by property type -->
-    <div class="row">
-      <div class="col-md-12 jumbotron text-center">
-        <p class="heading">NYC Eviction Record - By Property Type</p>
-        <p class="sub-heading">Use the interactive charts below to explore the dataset</p>
-      </div>
+    <!-- page header -->
+    <div class="hero text-center">
+      <p class="heading">NYC Eviction Record - By Property Type</p>
+      <p class="sub-heading">Use the interactive charts below to explore the dataset</p>
     </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="well">
-          <h5>Select Calendar Year:</h5>
-          <select id="selDataset" onchange="optionChanged(this.value)">
-            <option>2019</option>
-            <option>2018</option>
-            <option>2017</option>
-          </select>
+    <!-- container/wrapper-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="well">
+            <h5>Select Calendar Year:</h5>
+            <select id="selDataset" onchange="optionChanged(this.value)">
+              <option>2019</option>
+              <option>2018</option>
+              <option>2017</option>
+            </select>
+          </div>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h5 class="panel-title">Property Type</h5>
+            </div>
+            <div id="sample-metadata" class="panel-body">
+              <div id="commercial" class="panel-body">Commercial</div>
+              <div id="residential" class="panel-body">Residential</div>
+            </div>
+          </div>
         </div>
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h5 class="panel-title">Property Type</h5>
-          </div>
-          <div id="sample-metadata" class="panel-body">
-            <div id="commercial" class="panel-body">Commercial</div>
-            <div id="residential" class="panel-body">Residential</div>
-          </div>
+        <div class="col-md-8">
+          <div id="bar"></div>
         </div>
       </div>
-      <div class="col-md-8">
-        <div id="bar"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 footer-info">
-        <p class="plot-info">Select a year to dynamically change the horizontal bar chart to visualize the number of
-          evictions by property
-          type. Also, see the property type information dynamically change in the table.</p>
-        <p class="plot-info">As shown, there are consistently far more residential evictions than commercial ones.</p>
+      <div class="row">
+        <div class="col-md-12 footer-info">
+          <p class="plot-info">Select a year to dynamically change the horizontal bar chart to visualize the number of
+            evictions by property
+            type. Also, see the property type information dynamically change in the table.</p>
+          <p class="plot-info">As shown, there are consistently far more residential evictions than commercial ones.</p>
+        </div>
       </div>
     </div>
   </div>
-
   <!-- jquery-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

@@ -15,111 +15,114 @@
 </head>
 
 <body>
-  <!-- nav bar-->
-  <nav class="navbar navbar-expand-lg" style="background-color: wheat; color: white">
-    <a class="navbar-brand logo" href="/" style="background-color: wheat; color: white">NYC Eviction</a>
-    <div class="col-6"></div>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
-        <li><a href="/method" class="menu-option">Method</a></li>
-        <!-- NEW CODE -->
-        <li class="nav-item dropdown">
-          <a href="#" class="menu-option dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-            aria-expanded="true"> <span class="nav-label">Visualizations</span> <span class="caret"></span></a>
-          <ul class="menu-option dropdown-menu" style="background-color: wheat">
-            <li><a href="/byborough" class="menu-option">By Borough</a></li>
-            <li><a href="/byproperty" class="menu-option">By Property Type</a></li>
-            <li><a href="/byzipcode" class="menu-option">By Zip code</a></li>
-            <li><a href="/yearoveryear" class="menu-option">Year over Year</a></li>
-          </ul>
-        </li>
-        <li><a href="/nycmap" class="menu-option">NYC Map</a></li>
-        <li><a href="/aboutus" class="menu-option">About Us</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div class="wrapper">
+    <!-- nav bar-->
+    <nav class="navbar navbar-expand-lg" style="background-color: wheat; color: white">
+      <a class="navbar-brand logo" href="/" style="background-color: wheat; color: white">NYC Eviction</a>
+      <div class="col-6"></div>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
+          <li><a href="/method" class="menu-option">Method</a></li>
+          <!-- NEW CODE -->
+          <li class="nav-item dropdown">
+            <a href="#" class="menu-option dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="true"> <span class="nav-label">Visualizations</span> <span class="caret"></span></a>
+            <ul class="menu-option dropdown-menu" style="background-color: wheat">
+              <li><a href="/byborough" class="menu-option">By Borough</a></li>
+              <li><a href="/byproperty" class="menu-option">By Property Type</a></li>
+              <li><a href="/byzipcode" class="menu-option">By Zip code</a></li>
+              <li><a href="/yearoveryear" class="menu-option">Year over Year</a></li>
+            </ul>
+          </li>
+          <li><a href="/nycmap" class="menu-option">NYC Map</a></li>
+          <li><a href="/aboutus" class="menu-option">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
 
-  <!-- container/wrapper-->
-  <div class="container">
-    <!-- our team information -->
-    <div class="row">
-      <div class="col-md-12 jumbotron text-center">
-        <p class="heading">Method - Our Technology Stack</p>
-        <p class="sub-heading">Here is a brief description of the tools that were used to accomplish this project</p>
-      </div>
+    <!-- page header -->
+    <div class="hero text-center">
+      <p class="heading">Method - Our Technology Stack</p>
+      <p class="sub-heading">Here is a brief description of the tools that were used to accomplish this project</p>
     </div>
-    <!-- top banner -->
-    <div class="row">
-      <div class="col-md-12">
-        <img src="../static/images/Technology-Stack.jpg" alt="Home Page Top Banner"
-          style="padding-bottom: 10px;width:950px;height:550px;">
+    <!-- container/wrapper-->
+    <div class="container">
+      <!-- top banner -->
+      <div class="row">
+        <div class="col-md-12">
+          <img src="../static/images/Technology-Stack.jpg" alt="Home Page Top Banner"
+            style="padding-bottom: 10px;width:950px;height:550px;">
+        </div>
       </div>
-    </div>
-    <!-- stack information -->
-    <div class="row stack-details">
-      <div class="col-md-4">
-        <span class="stack-name">PostgreSQL, CSV</span>
+      <!-- stack information -->
+      <div class="row stack-details">
+        <div class="col-md-4">
+          <span class="stack-name">PostgreSQL, CSV</span>
+        </div>
+        <div class="col-md-8">
+          <p class="stack-info">Our first step was to download the data from NYC Open Data in csv format and imported it
+            to our
+            PostgreSQL database to perform subsequent ETL</p>
+        </div>
       </div>
-      <div class="col-md-8">
-        <p class="stack-info">Our first step was to download the data from NYC Open Data in csv format and imported it
-          to our
-          PostgreSQL database to perform subsequent ETL</p>
+      <div class="row stack-details">
+        <div class="col-md-4">
+          <span class="stack-name">Jupyter Notebook, Pandas, SQLAlchemy</span>
+        </div>
+        <div class="col-md-8">
+          <p class="stack-info">The ETL process consists of cleaning the intial NYC open data to make sure all the zip
+            codes are correct and the dataset includes eviction records for the entire year of 2017, 2018 & 2019. Later
+            on
+            we performed
+            various grouping and merging to create JSON files that are ready to be rendered for our visualization.
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="row stack-details">
-      <div class="col-md-4">
-        <span class="stack-name">Jupyter Notebook, Pandas, SQLAlchemy</span>
+      <div class="row stack-details">
+        <div class="col-md-4">
+          <span class="stack-name">HTML, CSS, Bootstrap</span>
+        </div>
+        <div class="col-md-8">
+          <p class="stack-info">All of our webpages are using Bootstrap framework on top of HTML5 & CSS3 to construct
+            the
+            templates.
+          </p>
+        </div>
       </div>
-      <div class="col-md-8">
-        <p class="stack-info">The ETL process consists of cleaning the intial NYC open data to make sure all the zip
-          codes are correct and the dataset includes eviction records for the entire year of 2017, 2018 & 2019. Later on
-          we performed
-          various grouping and merging to create JSON files that are ready to be rendered for our visualization.
-        </p>
+      <div class="row stack-details">
+        <div class="col-md-4">
+          <span class="stack-name">Python, Flask</span>
+        </div>
+        <div class="col-md-8">
+          <p class="stack-info">Our base application is running on Python/Flask framework. We are rendering all our
+            pages
+            through Flask route and where needed, passing the visualization data to the corresponding page via Flask
+            Decorators.
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="row stack-details">
-      <div class="col-md-4">
-        <span class="stack-name">HTML, CSS, Bootstrap</span>
+      <div class="row stack-details">
+        <div class="col-md-4">
+          <span class="stack-name">Plotly, JavaScript, ES6</span>
+        </div>
+        <div class="col-md-8">
+          <p class="stack-info">We have used JavaScript to make our website interactive and included ES6 features do
+            modernize our code. All of our charts are made using Plotly.
+          </p>
+        </div>
       </div>
-      <div class="col-md-8">
-        <p class="stack-info">All of our webpages are using Bootstrap framework on top of HTML5 & CSS3 to construct the
-          templates.
-        </p>
-      </div>
-    </div>
-    <div class="row stack-details">
-      <div class="col-md-4">
-        <span class="stack-name">Python, Flask</span>
-      </div>
-      <div class="col-md-8">
-        <p class="stack-info">Our base application is running on Python/Flask framework. We are rendering all our pages
-          through Flask route and where needed, passing the visualization data to the corresponding page via Flask
-          Decorators.
-        </p>
-      </div>
-    </div>
-    <div class="row stack-details">
-      <div class="col-md-4">
-        <span class="stack-name">Plotly, JavaScript, ES6</span>
-      </div>
-      <div class="col-md-8">
-        <p class="stack-info">We have used JavaScript to make our website interactive and included ES6 features do
-          modernize our code. All of our charts are made using Plotly.
-        </p>
-      </div>
-    </div>
-    <div class="row stack-details">
-      <div class="col-md-4">
-        <span class="stack-name">LeafletJS, D3</span>
-      </div>
-      <div class="col-md-8">
-        <p class="stack-info">The NYC Map to show yearly eviction numbers by zip code is prepared with LeafletJS and D3.
-        </p>
+      <div class="row stack-details">
+        <div class="col-md-4">
+          <span class="stack-name">LeafletJS, D3</span>
+        </div>
+        <div class="col-md-8">
+          <p class="stack-info">The NYC Map to show yearly eviction numbers by zip code is prepared with LeafletJS and
+            D3.
+          </p>
+        </div>
       </div>
     </div>
   </div>
-
   <!-- jquery-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

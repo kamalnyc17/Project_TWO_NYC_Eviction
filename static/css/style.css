@@ -4,6 +4,13 @@ body,
     margin: auto
 }
 
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 130px;
+    overflow: auto;
+}
+
 .logo {
     border-radius: 5px;
     background-color: #FF6347;
@@ -11,8 +18,8 @@ body,
     font-size: 36px;
     color: white;
     padding: 10px
-}     
-    
+}
+
 .navbar {
     font-size: 18px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -126,8 +133,22 @@ body,
     font-size: 36px;
     padding: 0px;
     font-weight: 600;
+    color: white;
 }
 
 .sub-heading {
-    font-size: 16px;
+    font-size: 24px;
+}
+
+/* The styles for the parallax */
+.hero {
+    position: relative;
+    height: 400px;
+    padding: 20px;
+    margin-bottom: 10px;
+    background: black;
+    background-image: url("../images/Homepage-Top-Banner.jpg");
+    background-attachment: fixed;
+    background-position: bottom center;
+    background-size: cover;
 }
