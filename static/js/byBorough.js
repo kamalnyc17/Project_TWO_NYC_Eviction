@@ -25,8 +25,8 @@ const pieChart = (data, id) => {
     }];
 
     var layout = {
-        height: 400,
-        width: 500,
+        height: 500,
+        width: 700,
         margin: {"t": 20, "b": 0, "l": 50, "r": 0},
     };
 

@@ -54,7 +54,7 @@ const lineChart = (data, id) => {
         ticktext: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
       },
         autosize: false,
-        width: 700,
+        width: 900,
         height: 500,
         margin: {
           l: 60,

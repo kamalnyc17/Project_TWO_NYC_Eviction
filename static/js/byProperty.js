@@ -26,8 +26,8 @@ const barChart = (id) => {
     const plot_data = [trace1];
     const layout = {
         autosize: false,
-        width: 600,
-        height: 300,
+        width: 700,
+        height: 400,
         margin: {
           l: 80,
           r: 20,
