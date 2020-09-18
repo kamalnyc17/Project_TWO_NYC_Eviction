@@ -1,5 +1,6 @@
 ![Alt text](static/images/Homepage-Top-Banner.jpg?raw=true "Image to view")
 # NYC Evictions Analysis 
+------------------------------------------------------------------------------------------------------
 
 ## Goal 
 #### Visualize trends related to evictions in NYC between the years 2017-2019 on an interactive dashboard.
