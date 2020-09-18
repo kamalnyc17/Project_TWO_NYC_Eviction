@@ -7,13 +7,13 @@ body,
 .wrapper {
     position: relative;
     min-height: 100%;
-    padding-bottom: 130px;
+    padding-bottom: 50px;
     overflow: auto;
 }
 
 .logo {
-    border-radius: 5px;
-    background-color: #FF6347;
+    border-radius: 10px;
+    border: 2px solid #FF6347;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 36px;
     color: white;
