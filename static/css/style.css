@@ -137,6 +137,10 @@ body,
     color: white;
 }
 
+.heading {
+    padding-top: 100px;
+}
+
 .sub-heading {
     font-size: 24px;
 }
