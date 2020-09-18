@@ -46,30 +46,33 @@
       <p class="sub-heading">Here is a brief description of the tools that were used to accomplish this project</p>
     </div>
     <!-- container/wrapper-->
-    <div class="container">
+    <div class="container-fluid">
       <!-- top banner -->
       <div class="row">
         <div class="col-md-12">
           <img src="../static/images/Technology-Stack.jpg" alt="Home Page Top Banner"
-            style="padding-bottom: 10px;width:950px;height:550px;">
+            style="padding-bottom: 10px;width:100%;height:700px;">
         </div>
       </div>
       <!-- stack information -->
       <div class="row stack-details">
-        <div class="col-md-4">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
           <span class="stack-name">PostgreSQL, CSV</span>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-7">
           <p class="stack-info">Our first step was to download the data from NYC Open Data in csv format and imported it
             to our
             PostgreSQL database to perform subsequent ETL</p>
         </div>
+        <div class="col-md-1"></div>
       </div>
       <div class="row stack-details">
-        <div class="col-md-4">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
           <span class="stack-name">Jupyter Notebook, Pandas, SQLAlchemy</span>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-7">
           <p class="stack-info">The ETL process consists of cleaning the intial NYC open data to make sure all the zip
             codes are correct and the dataset includes eviction records for the entire year of 2017, 2018 & 2019. Later
             on
@@ -77,49 +80,58 @@
             various grouping and merging to create JSON files that are ready to be rendered for our visualization.
           </p>
         </div>
+        <div class="col-md-1"></div>
       </div>
       <div class="row stack-details">
-        <div class="col-md-4">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
           <span class="stack-name">HTML, CSS, Bootstrap</span>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-7">
           <p class="stack-info">All of our webpages are using Bootstrap framework on top of HTML5 & CSS3 to construct
             the
             templates.
           </p>
         </div>
+        <div class="col-md-1"></div>
       </div>
       <div class="row stack-details">
-        <div class="col-md-4">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
           <span class="stack-name">Python, Flask</span>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-7">
           <p class="stack-info">Our base application is running on Python/Flask framework. We are rendering all our
             pages
             through Flask route and where needed, passing the visualization data to the corresponding page via Flask
             Decorators.
           </p>
         </div>
+        <div class="col-md-1"></div>
       </div>
       <div class="row stack-details">
-        <div class="col-md-4">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
           <span class="stack-name">Plotly, JavaScript, ES6</span>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-7">
           <p class="stack-info">We have used JavaScript to make our website interactive and included ES6 features do
             modernize our code. All of our charts are made using Plotly.
           </p>
         </div>
+        <div class="col-md-1"></div>
       </div>
       <div class="row stack-details">
-        <div class="col-md-4">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
           <span class="stack-name">LeafletJS, D3</span>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-7">
           <p class="stack-info">The NYC Map to show yearly eviction numbers by zip code is prepared with LeafletJS and
             D3.
           </p>
         </div>
+        <div class="col-md-1"></div>
       </div>
     </div>
   </div>
