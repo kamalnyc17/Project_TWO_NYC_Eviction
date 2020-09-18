@@ -9,7 +9,7 @@ const evictionTotal = (id) => {
     const mapPapa = document.getElementById("mapPapa");
     const childDiv = document.createElement('div');
     childDiv.setAttribute("id", "map")
-    childDiv.setAttribute("style", "height: 600px;")
+    childDiv.setAttribute("style", "height: 600px; margin-top: 15px")
     mapPapa.appendChild(childDiv)
     // setting eviction threshold based on user input
     let totalMinEviction, totalMaxEviction
