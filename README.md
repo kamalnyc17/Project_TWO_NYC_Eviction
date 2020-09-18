@@ -8,6 +8,8 @@ This dashboard seeks to look at NYC eviction data between the years 2017-2019. V
  
 When tenants are for any reason not paying their rent or are otherwise not legally occupying their apartment, landlords can mount a nonpayment or holdover eviction proceeding against them and bring them to housing court. In NYC, housing courts in all boroughs are usually filled with frenzied landlords, tenants, lawyers, and housing court and community organization officials. Pre COVID-19, evictions and housing court cases were in full swing as regularly scheduled programming. But during this unprecedented time of a global pandemic, in mid-March 2020, Governor Andrew Cuomo issued a moratorium on evictions. Now, residential tenants cannot be evicted through October 1. 
 
+While we are now looking at evictions from the years 2017-2019, future analyses can look at how evictions changed post-COVID.
+
 ![Alt text](static/images/Homepage-Banner-Three.jpg?raw=true "Image to view")
 
 ### Methods
