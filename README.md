@@ -12,21 +12,27 @@ When tenants are for any reason not paying their rent or are otherwise not legal
 
 ### Methods
 * PostgreSQL, CSV
+
 Our first step was to download the data from NYC Open Data in csv format and imported it to our PostgreSQL database to perform subsequent ETL
 
 * Jupyter Notebook, Pandas, SQLAlchemy
+
 The ETL process consists of cleaning the intial NYC open data to make sure all the zip codes are correct and the dataset includes eviction records for the entire year of 2017, 2018 & 2019. Later on we performed various grouping and merging to create JSON files that are ready to be rendered for our visualization.
 
 * HTML, CSS, Bootstrap
+
 All of our webpages are using Bootstrap framework on top of HTML5 & CSS3 to construct the templates.
 
 * Python, Flask
+
 Our base application is running on Python/Flask framework. We are rendering all our pages through Flask route and where needed, passing the visualization data to the corresponding page via Flask Decorators.
 
 * Plotly, JavaScript, ES6
+
 We have used JavaScript to make our website interactive and included ES6 features do modernize our code. All of our charts are made using Plotly.
 
 * LeafletJS, D3
+
 The NYC Map to show yearly eviction numbers by zip code is prepared with LeafletJS and D3.
 
 
