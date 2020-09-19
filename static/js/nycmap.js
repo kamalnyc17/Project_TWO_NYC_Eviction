@@ -54,7 +54,7 @@ const evictionTotal = (id) => {
                             fillOpacity: 0.75,
                             radius: data.total * 2,
                             weight: 0.2
-                        }).bindPopup("<h3>" + data.year + "</h3> <hr> <h3>Zip Code: " + data.Zip + "</h3> <hr> <h3>No. of Eviction: " + data.total + "</h3>")
+                        }).bindPopup("<h3>Year: " + data.year + "</h3> <hr> <h3>Zip Code: " + data.Zip + "</h3> <hr> <h3>No. of Eviction: " + data.total + "</h3>")
                     )
                 } else if (data.year === 2018) {
                     markers2018.push(
@@ -64,7 +64,7 @@ const evictionTotal = (id) => {
                             fillOpacity: 0.75,
                             radius: data.total * 2,
                             weight: 0.2
-                        }).bindPopup("<h3>" + data.year + "</h3> <hr> <h3>Zip Code: " + data.Zip + "</h3> <hr> <h3>No. of Eviction: " + data.total + "</h3>")
+                        }).bindPopup("<h3>Year: " + data.year + "</h3> <hr> <h3>Zip Code: " + data.Zip + "</h3> <hr> <h3>No. of Eviction: " + data.total + "</h3>")
                     )
                 } else if (data.year === 2019) {
                     markers2019.push(
@@ -74,7 +74,7 @@ const evictionTotal = (id) => {
                             fillOpacity: 0.75,
                             radius: data.total * 2,
                             weight: 0.2
-                        }).bindPopup("<h3>" + data.year + "</h3> <hr> <h3>Zip Code: " + data.Zip + "</h3> <hr> <h3>No. of Eviction: " + data.total + "</h3>")
+                        }).bindPopup("<h3>Year: " + data.year + "</h3> <hr> <h3>Zip Code: " + data.Zip + "</h3> <hr> <h3>No. of Eviction: " + data.total + "</h3>")
                     )
                 }
             }
